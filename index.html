@@ -4,111 +4,269 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mohamed Taha — Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
-    <header class="container header">
-      <p class="badge">Portfolio</p>
-      <h1>Mohamed Taha</h1>
-      <p class="subtitle">Computer Science Student • Projects</p>
 
-      <div class="actions">
-        <a class="btn" href="https://github.com/mohamedtah22" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="btn ghost" href="Mohamed-Taha-CV.pdf" target="_blank" rel="noreferrer">CV</a>
-        <a class="btn ghost" href="mailto:yourmail@example.com">Email</a>
+  <body>
+    <div class="bg-glow"></div>
+
+    <header class="container header">
+      <!-- SIMPLE HERO (one column, no right card, no stats boxes) -->
+      <div class="hero simple">
+        <div class="hero-left">
+          <span class="pill">Projects Portfolio</span>
+          <h1>Mohamed Taha</h1>
+
+          <p class="subtitle" style="max-width: 80ch;">
+           Third-year Computer Science student with a GPA of 80+. During my studies, I have completed several software projects covering full-stack web development, C++, and networking. I also have a practical interest in compilers, cloud, and distributed systems.
+          </p>
+
+          <p class="subtitle" style="margin-top: 10px; max-width: 90ch;">
+            <b>Skills:</b> React, JavaScript/TypeScript, Node.js & Express (REST APIs), Java (Sockets / Client-Server),
+            C++ , c ,Ocamle, Shceme, html, css,react native,flutter,(OOP & Data Structures), AWS (S3/SQS/EC2), Git, Linux.
+          </p>
+
+          <div class="hero-actions" style="margin-top: 14px;">
+            <a class="btn primary" href="https://github.com/mohamedtah22" target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+            <a class="btn secondary" href="mailto:mhmd.taha5123@gmail.com">
+              mhmd.taha5123@gmail.com
+            </a>
+          </div>
+        </div>
       </div>
     </header>
 
-    <main class="container">
+    <main class="container" id="projects">
+      <!-- FRONTEND / FULL-STACK -->
       <section class="section">
-        <h2>Frontend</h2>
-        <ul class="list">
-          <li>
-            <a class="repo" href="https://github.com/mohamedtah22/FrontEndbgu" target="_blank" rel="noreferrer">
-              FrontEndbgu
-            </a>
-            <span class="desc">Frontend course projects (React/TypeScript).</span>
-          </li>
-          <li>
-            <a class="repo" href="https://github.com/mohamedtah22/noteapp2" target="_blank" rel="noreferrer">
-              noteapp2
-            </a>
-            <span class="desc">Notes app UI with clean components and CRUD-style flow.</span>
-          </li>
-        </ul>
+        <div class="section-head">
+          <h2>Frontend / Full-Stack</h2>
+          <span class="section-sub">React UI + Express API</span>
+        </div>
+
+        <article class="project card">
+          <div class="project-head">
+            <div>
+              <h3>FrontEndbgu — Notes App (Full-Stack)</h3>
+              <p class="stack">React • JavaScript/TypeScript • Express.js • REST API</p>
+            </div>
+            <div class="badge2">Featured</div>
+          </div>
+
+          <p class="desc">
+            A full-stack notes application: a React frontend with a clean UI, backed by an Express.js server that exposes
+            API endpoints for managing notes. Built around a clear CRUD flow (create / read / update / delete), with
+            organized code and a practical architecture.
+          </p>
+
+          <ul class="bullets">
+            <li>Frontend: reusable React components + state handling</li>
+            <li>Backend: Express REST API for notes operations</li>
+            <li>Clean structure and readable code for maintenance</li>
+          </ul>
+
+          <div class="links">
+            <a href="https://github.com/mohamedtah22/FrontEndbgu" target="_blank" rel="noreferrer">Open Repository</a>
+          </div>
+        </article>
       </section>
 
+      <!-- C++ / OOP -->
       <section class="section">
-        <h2>C++ / OOP</h2>
-        <ul class="list">
-          <li>
-            <a class="repo" href="https://github.com/mohamedtah22/warehouse" target="_blank" rel="noreferrer">
-              warehouse
-            </a>
-            <span class="desc">Warehouse management project in C++ (OOP + data structures).</span>
-          </li>
-        </ul>
+        <div class="section-head">
+          <h2>C++ / OOP</h2>
+          <span class="section-sub">Systems-style coding</span>
+        </div>
+
+        <article class="project card">
+          <div class="project-head">
+            <div>
+              <h3>warehouse — Warehouse Management (C++)</h3>
+              <p class="stack">C++ • OOP • Data Structures</p>
+            </div>
+          </div>
+
+          <p class="desc">
+            A C++ project focused on clean object-oriented design and using data structures to manage
+            warehouse entities and operations in a structured way.
+          </p>
+
+          <ul class="bullets">
+            <li>OOP design: classes, encapsulation, clear responsibilities</li>
+            <li>Inventory operations: add/update/search and manage quantities</li>
+            <li>Attention to correctness and edge cases</li>
+          </ul>
+
+          <div class="links">
+            <a href="https://github.com/mohamedtah22/warehouse" target="_blank" rel="noreferrer">Open Repository</a>
+          </div>
+        </article>
       </section>
 
+      <!-- NETWORKING -->
       <section class="section">
-        <h2>Networking</h2>
-        <ul class="list">
-          <li>
-            <a class="repo" href="https://github.com/mohamedtah22/SERVER-CLIENT" target="_blank" rel="noreferrer">
-              SERVER-CLIENT
-            </a>
-            <span class="desc">Client-server networking project (sockets / protocol basics).</span>
-          </li>
-        </ul>
+        <div class="section-head">
+          <h2>Networking</h2>
+          <span class="section-sub">Java • Sockets • Client/Server</span>
+        </div>
+
+        <article class="project card">
+          <div class="project-head">
+            <div>
+              <h3>SERVER-CLIENT — Data Transfer over Sockets (Java)</h3>
+              <p class="stack">Java • Sockets • Protocol • File Transfer (Images/Videos)</p>
+            </div>
+          </div>
+
+          <p class="desc">
+            A Java client-server networking project using sockets to send data between endpoints.
+            Supports transferring files such as images and videos, with a focus on clean protocol handling,
+            message framing, and reliable communication.
+          </p>
+
+          <ul class="bullets">
+            <li>Socket programming (client/server) and connection handling</li>
+            <li>Send/receive files (e.g., images/videos) between two machines</li>
+            <li>Clear separation between networking logic and application logic</li>
+          </ul>
+
+          <div class="links">
+            <a href="https://github.com/mohamedtah22/SERVER-CLIENT" target="_blank" rel="noreferrer">Open Repository</a>
+          </div>
+        </article>
       </section>
 
+      <!-- COMPILERS -->
       <section class="section">
-        <h2>Compilers</h2>
-        <ul class="list">
-          <li>
-            <a class="repo" href="https://github.com/mohamedtah22/compiler" target="_blank" rel="noreferrer">
-              compiler
-            </a>
-            <span class="desc">Compiler course project: parsing / AST / compilation pipeline.</span>
-          </li>
-        </ul>
+        <div class="section-head">
+          <h2>Compilers</h2>
+          <span class="section-sub">Scheme → Assembly</span>
+        </div>
+
+        <article class="project card">
+          <div class="project-head">
+            <div>
+              <h3>compiler — Scheme Compiler</h3>
+              <p class="stack">Parsing • AST • Semantics • Code Generation • Assembly</p>
+            </div>
+          </div>
+
+          <p class="desc">
+            A compiler project that compiles a subset of <b>Scheme</b> into <b>assembly</b>.
+            It includes the full compilation pipeline: parsing Scheme code, building an AST, performing transformations,
+            and generating low-level assembly output ready for execution.
+          </p>
+
+          <ul class="bullets">
+            <li>Parses Scheme source into a structured AST</li>
+            <li>Handles compilation stages and transformations</li>
+            <li>Generates assembly code (Scheme → Assembly)</li>
+          </ul>
+
+          <div class="links">
+            <a href="https://github.com/mohamedtah22/compiler" target="_blank" rel="noreferrer">Open Repository</a>
+          </div>
+        </article>
       </section>
 
+      <!-- CLOUD / AWS -->
       <section class="section">
-        <h2>Cloud / Distributed Systems</h2>
-        <ul class="list">
-          <li>
-            <a class="repo" href="https://github.com/MohamedAli74/Text-Mining-MapReduce-Engine" target="_blank" rel="noreferrer">
-              Text-Mining-MapReduce-Engine
+        <div class="section-head">
+          <h2>Cloud / Distributed Systems</h2>
+          <span class="section-sub">AWS • Large-scale text/book processing</span>
+        </div>
+
+        <article class="project card">
+          <div class="project-head">
+            <div>
+              <h3>Text-Analysis-in-the-Cloud</h3>
+              <p class="stack">AWS • S3 • SQS • EC2 • Pipeline Architecture</p>
+            </div>
+            <div class="badge2">AWS</div>
+          </div>
+
+          <p class="desc">
+            A cloud-based text analysis pipeline built on AWS that processes large collections of books/documents.
+            Inputs are uploaded to S3, tasks are coordinated through SQS, and computation runs on EC2 in a distributed
+            manager/worker workflow. The system produces structured analysis outputs from raw text, ready for further NLP tasks.
+          </p>
+
+          <ul class="bullets">
+            <li>Processes large book/document datasets using a distributed workflow</li>
+            <li>Manager/worker architecture with queue-based coordination</li>
+            <li>AWS integration: S3 for storage, SQS for tasks, EC2 for compute</li>
+            <li>Outputs structured results that can be used for further analysis</li>
+          </ul>
+
+          <div class="links">
+            <a href="https://github.com/MohamedAli74/Text-Analysis-in-the-Cloud" target="_blank" rel="noreferrer">
+              Open Repository
             </a>
-            <span class="desc">MapReduce-style text mining engine (Java + AWS workflow).</span>
-          </li>
-          <li>
-            <a class="repo" href="https://github.com/MohamedAli74/Text-Analysis-in-the-Cloud" target="_blank" rel="noreferrer">
-              Text-Analysis-in-the-Cloud
+          </div>
+        </article>
+
+        <article class="project card">
+          <div class="project-head">
+            <div>
+              <h3>Text-Mining-MapReduce-Engine</h3>
+              <p class="stack">Java • MapReduce style • Distributed processing • AWS workflow</p>
+            </div>
+            <div class="badge2">MapReduce</div>
+          </div>
+
+          <p class="desc">
+            A MapReduce-style text mining engine that processes large inputs by splitting work across stages.
+            Emphasizes pipeline design, correctness, and distributed execution workflow.
+          </p>
+
+          <ul class="bullets">
+            <li>Multi-stage processing (mapper/reducer-style stages)</li>
+            <li>Designed to scale across distributed resources</li>
+            <li>Clear separation between stages and responsibilities</li>
+          </ul>
+
+          <div class="links">
+            <a href="https://github.com/MohamedAli74/Text-Mining-MapReduce-Engine" target="_blank" rel="noreferrer">
+              Open Repository
             </a>
-            <span class="desc">Cloud text analysis pipeline (S3/SQS/EC2 architecture).</span>
-          </li>
-        </ul>
+          </div>
+        </article>
       </section>
 
+      <!-- GAME / REALTIME -->
       <section class="section">
-        <h2>Game / Realtime</h2>
-        <ul class="list">
-          <li>
-            <a class="repo" href="https://github.com/mohamedtah22/bang-" target="_blank" rel="noreferrer">
-              bang-
-            </a>
-            <span class="desc">Multiplayer card game project (rooms + real-time events).</span>
-          </li>
-        </ul>
+        <div class="section-head">
+          <h2>Game / Realtime</h2>
+          <span class="section-sub">Rooms • Live events</span>
+        </div>
+
+        <article class="project card">
+          <div class="project-head">
+            <div>
+              <h3>bang- — Multiplayer Card Game (Realtime)</h3>
+              <p class="stack">WebSocket • Realtime rooms • Multiplayer events</p>
+            </div>
+          </div>
+
+          <p class="desc">
+            A multiplayer card game project inspired by <b>BANG!</b>. Built around room creation/joining and real-time
+            gameplay events. WebSockets are used to keep players synchronized instantly during the match.
+          </p>
+
+          <ul class="bullets">
+            <li>Real-time communication using WebSockets</li>
+            <li>Rooms / sessions management (create & join flow)</li>
+            <li>Event-based gameplay updates between players</li>
+          </ul>
+
+          <div class="links">
+            <a href="https://github.com/mohamedtah22/bang-" target="_blank" rel="noreferrer">Open Repository</a>
+          </div>
+        </article>
       </section>
 
-      <footer class="footer">
-        <p class="muted">© <span id="year"></span> Mohamed Taha</p>
-      </footer>
     </main>
-
-    <script src="script.js"></script>
   </body>
 </html>
