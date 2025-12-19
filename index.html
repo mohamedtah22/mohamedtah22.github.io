@@ -11,28 +11,25 @@
     <div class="bg-glow"></div>
 
     <header class="container header">
-      <!-- SIMPLE HERO (one column, no right card, no stats boxes) -->
       <div class="hero simple">
         <div class="hero-left">
           <span class="pill">Projects Portfolio</span>
           <h1>Mohamed Taha</h1>
 
           <p class="subtitle" style="max-width: 80ch;">
-           Third-year Computer Science student with a GPA of 80+. During my studies, I have completed several software projects covering full-stack web development, C++, and networking. I also have a practical interest in compilers, cloud, and distributed systems.
+            Third-year Computer Science student with a GPA of 80+. During my studies, I completed several software
+            projects across operating systems (xv6), full-stack web development, C++, and networking. I also have strong
+            practical interest in compilers, cloud, and distributed systems.
           </p>
 
           <p class="subtitle" style="margin-top: 10px; max-width: 90ch;">
-            <b>Skills:</b> React, JavaScript/TypeScript, Node.js & Express (REST APIs), Java (Sockets / Client-Server),
-            C++ , c ,Ocamle, Shceme, html, css,react native,flutter,(OOP & Data Structures), AWS (S3/SQS/EC2), Git, Linux.
+            <b>Skills:</b> C, C++, Java, Python, JavaScript/TypeScript, OCaml, Scheme, Assembly • React, Node.js & Express
+            (REST APIs) • Java Sockets (Client–Server) • HTML/CSS • AWS (S3/SQS/EC2) • Git, Linux • React Native, Flutter
           </p>
 
           <div class="hero-actions" style="margin-top: 14px;">
-            <a class="btn primary" href="https://github.com/mohamedtah22" target="_blank" rel="noreferrer">
-              GitHub
-            </a>
-            <a class="btn secondary" href="mailto:mhmd.taha5123@gmail.com">
-              mhmd.taha5123@gmail.com
-            </a>
+            <a class="btn primary" href="https://github.com/mohamedtah22" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn secondary" href="mailto:mhmd.taha5123@gmail.com">mhmd.taha5123@gmail.com</a>
           </div>
         </div>
       </div>
@@ -89,8 +86,8 @@
           </div>
 
           <p class="desc">
-            A C++ project focused on clean object-oriented design and using data structures to manage
-            warehouse entities and operations in a structured way.
+            A C++ project focused on clean object-oriented design and using data structures to manage warehouse entities
+            and operations in a structured way.
           </p>
 
           <ul class="bullets">
@@ -121,9 +118,9 @@
           </div>
 
           <p class="desc">
-            A Java client-server networking project using sockets to send data between endpoints.
-            Supports transferring files such as images and videos, with a focus on clean protocol handling,
-            message framing, and reliable communication.
+            A Java client-server networking project using sockets to send data between endpoints. Supports transferring
+            files such as images and videos, with a focus on clean protocol handling, message framing, and reliable
+            communication.
           </p>
 
           <ul class="bullets">
@@ -138,11 +135,49 @@
         </article>
       </section>
 
+      <!-- OPERATING SYSTEMS (NEW) -->
+      <section class="section">
+        <div class="section-head">
+          <h2>Operating Systems</h2>
+          <span class="section-sub">xv6 kernel extensions</span>
+        </div>
+
+        <article class="project card">
+          <div class="project-head">
+            <div>
+              <h3>xv6 Shared Memory & Multi-process Logging System</h3>
+              <p class="stack">C • xv6 Kernel • Virtual Memory • Atomic Sync</p>
+            </div>
+            <div class="badge2">xv6</div>
+          </div>
+
+          <p class="desc">
+            Extended the xv6 operating system with shared memory support and used it to build a synchronized
+            multi-process logging system. The project enables multiple processes to share physical pages safely and
+            coordinate access to a shared logging buffer using atomic operations.
+          </p>
+
+          <ul class="bullets">
+            <li><b>Shared Memory API:</b> implemented <code>map_shared_pages</code> to map physical pages across processes</li>
+            <li><b>VM work:</b> used <code>walk()</code> and <code>mappages()</code>; handled alignment with PGROUNDDOWN/PGROUNDUP</li>
+            <li><b>Safety:</b> introduced a custom shared-page flag (PTE_S) so pages are freed only by original owners</li>
+            <li><b>Logging:</b> shared buffer + atomic CAS (<code>__sync_val_compare_and_swap</code>) to prevent races</li>
+            <li><b>Tests:</b> <code>shmem_test</code> and <code>log_test</code> + run via <code>make qemu</code></li>
+          </ul>
+
+          <div class="links">
+            <a href="https://github.com/mohamedtah22/xv6-Shared-Memory-Support" target="_blank" rel="noreferrer">
+              Open Repository
+            </a>
+          </div>
+        </article>
+      </section>
+
       <!-- COMPILERS -->
       <section class="section">
         <div class="section-head">
           <h2>Compilers</h2>
-          <span class="section-sub">Scheme → Assembly</span>
+          <span class="section-sub">Scheme → Assembly • Type systems</span>
         </div>
 
         <article class="project card">
@@ -154,9 +189,9 @@
           </div>
 
           <p class="desc">
-            A compiler project that compiles a subset of <b>Scheme</b> into <b>assembly</b>.
-            It includes the full compilation pipeline: parsing Scheme code, building an AST, performing transformations,
-            and generating low-level assembly output ready for execution.
+            A compiler project that compiles a subset of <b>Scheme</b> into <b>assembly</b>. It includes the full
+            compilation pipeline: parsing Scheme code, building an AST, performing transformations, and generating
+            low-level assembly output ready for execution.
           </p>
 
           <ul class="bullets">
@@ -167,6 +202,36 @@
 
           <div class="links">
             <a href="https://github.com/mohamedtah22/compiler" target="_blank" rel="noreferrer">Open Repository</a>
+          </div>
+        </article>
+
+        <!-- L52 (NEW) -->
+        <article class="project card">
+          <div class="project-head">
+            <div>
+              <h3>L52 Language Interpreter</h3>
+              <p class="stack">TypeScript • Static Type Checker • Interpreter • AST</p>
+            </div>
+            <div class="badge2">Types</div>
+          </div>
+
+          <p class="desc">
+            Extended the L5 functional language into <b>L52</b> by implementing an advanced static type-checker and an
+            interpreter. The project focuses on set-theoretic types and type reasoning inside programs.
+          </p>
+
+          <ul class="bullets">
+            <li><b>Complex types:</b> Union, Intersection, and Difference types (set-theoretic principles)</li>
+            <li><b>Type predicates:</b> support for predicates (e.g., <code>is? number</code>) with type narrowing</li>
+            <li><b>Normalization:</b> flattening/normalizing into Disjunctive Normal Form (DNF)</li>
+            <li><b>Subtyping:</b> extended subtype logic for special atomic types (e.g., <code>any</code>, <code>never</code>)</li>
+            <li><b>Testing:</b> run with <code>npm test</code></li>
+          </ul>
+
+          <div class="links">
+            <a href="https://github.com/mohamedtah22/L52-Language-Interpreter" target="_blank" rel="noreferrer">
+              Open Repository
+            </a>
           </div>
         </article>
       </section>
@@ -190,7 +255,7 @@
           <p class="desc">
             A cloud-based text analysis pipeline built on AWS that processes large collections of books/documents.
             Inputs are uploaded to S3, tasks are coordinated through SQS, and computation runs on EC2 in a distributed
-            manager/worker workflow. The system produces structured analysis outputs from raw text, ready for further NLP tasks.
+            manager/worker workflow. The system produces structured analysis outputs from raw text.
           </p>
 
           <ul class="bullets">
@@ -217,8 +282,8 @@
           </div>
 
           <p class="desc">
-            A MapReduce-style text mining engine that processes large inputs by splitting work across stages.
-            Emphasizes pipeline design, correctness, and distributed execution workflow.
+            A MapReduce-style text mining engine that processes large inputs by splitting work across stages. Emphasizes
+            pipeline design, correctness, and distributed execution workflow.
           </p>
 
           <ul class="bullets">
@@ -266,7 +331,6 @@
           </div>
         </article>
       </section>
-
     </main>
   </body>
 </html>
